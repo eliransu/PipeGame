@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import application.PipeDisplayer?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="load" mnemonicParsing="false" text="Load" />
+                  <MenuItem fx:id="solve" mnemonicParsing="false" text="Solve" />
+                  <MenuItem fx:id="check" mnemonicParsing="false" text="Check" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="276.0" layoutY="14.0" text="IP: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="414.0" layoutY="14.0" text="Port: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ip" layoutX="296.0" layoutY="12.0" prefHeight="25.0" prefWidth="116.0" />
+            <TextField fx:id="port" layoutX="449.0" layoutY="12.0" prefHeight="25.0" prefWidth="61.0" />
+            <Button fx:id="connect" layoutX="521.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95" text="Connect" />
+            <Separator layoutY="45.0" prefHeight="15.0" prefWidth="10000" />
+            <Label layoutX="20.0" layoutY="13.0" text="- Welcome To PIPEGAME! -" textFill="#2000b2">
+               <font>
+                  <Font name="Corbel" size="20.0" />
+               </font>
+            </Label>
+            <PipeDisplayer fx:id="pipeDisplayer" layoutX="30.0" layoutY="51.0" prefHeight="312.0" prefWidth="540.0"></PipeDisplayer>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
